@@ -5,9 +5,10 @@ import ContactSection from '../components/ContactSection'
 
 export default function Services() {
   const services = [
-    { label: "AI Consulting", title: "Strategy and roadmaps that cut through the noise", 
+    { label: "AI Consulting", title: "Strategy and roadmaps that cut through the noise",
       desc: "Understanding your business objectives, sector, existing processes and challenges as a basis for rapid prototyping. We help you identify high-value AI use cases and build an actionable implementation plan.",
-      features: ["AI opportunity assessment", "Process mapping & automation audit", "ROI forecasting & business case", "Technology selection & architecture", "Change management strategy"] },
+      features: ["AI opportunity assessment", "Process mapping & automation audit", "ROI forecasting & business case", "Technology selection & architecture", "Change management strategy"],
+      image: "/ai-strategy.jpg" },
     { label: "Agentic Automation", title: "Intelligent workflows that work while you sleep",
       desc: "We design autonomous AI workflows that reduce manual work, improve accuracy and help teams focus on higher-value activities. From Make.com integrations to custom AI agent pipelines.",
       features: ["Multi-platform workflow automation", "AI-powered data routing & transformation", "Autonomous AI agents for repetitive tasks", "Error handling & self-healing systems", "Performance monitoring dashboards"] },
@@ -45,7 +46,13 @@ export default function Services() {
                 </div>
               </R>
               <R delay={150}>
-                <div className={`split__visual split__visual--gradient${(i % 3) + 1}`} />
+                {s.image ? (
+                  <div className="split__visual" style={{ overflow: 'hidden', padding: 0, background: 'none', border: 'none' }}>
+                    <img src={s.image} alt={s.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', borderRadius: '20px' }} />
+                  </div>
+                ) : (
+                  <div className={`split__visual split__visual--gradient${(i % 3) + 1}`} />
+                )}
               </R>
             </div>
           </div>
