@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Brain, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
@@ -25,8 +25,7 @@ export default function Nav() {
     <nav className={`nav ${scrolled ? 'nav--s' : ''}`}>
       <div className="w nav__inner">
         <Link to="/" className="nav__logo">
-          <div className="nav__mark"><Brain size={18} /></div>
-          <span>CortexIntel</span>
+          <span className="nav__logo-wrap"><img src="/logo.png" alt="CortexIntel" className="nav__logo-img" /></span>
         </Link>
         <div className={`nav__links ${open ? 'nav__links--open' : ''}`}>
           {links.map(l => (

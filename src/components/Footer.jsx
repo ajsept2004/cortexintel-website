@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { Brain } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -7,7 +6,7 @@ export default function Footer() {
       <div className="w footer__inner">
         <div className="footer__top">
           <div className="footer__brand">
-            <Link to="/" className="nav__logo"><div className="nav__mark"><Brain size={16} /></div><span>CortexIntel</span></Link>
+            <Link to="/" className="nav__logo"><span className="footer__logo-wrap"><img src="/logo.png" alt="CortexIntel" className="nav__logo-img footer__logo-img" /></span></Link>
             <p className="footer__addr">Kemp House, 152-160 City Road<br />London EC1V 2NX</p>
             <p className="footer__addr">Globesta, Vyttila<br />Kochi, Kerala 682019</p>
           </div>
