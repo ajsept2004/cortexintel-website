@@ -11,13 +11,16 @@ export default function Services() {
       image: "/ai-strategy.jpg" },
     { label: "Agentic Automation", title: "Intelligent workflows that work while you sleep",
       desc: "We design autonomous AI workflows that reduce manual work, improve accuracy and help teams focus on higher-value activities. From Make.com integrations to custom AI agent pipelines.",
-      features: ["Multi-platform workflow automation", "AI-powered data routing & transformation", "Autonomous AI agents for repetitive tasks", "Error handling & self-healing systems", "Performance monitoring dashboards"] },
+      features: ["Multi-platform workflow automation", "AI-powered data routing & transformation", "Autonomous AI agents for repetitive tasks", "Error handling & self-healing systems", "Performance monitoring dashboards"],
+      image: "/agentic-automation.jpg" },
     { label: "Custom AI Development", title: "Bespoke AI software built for your business",
       desc: "From custom models and integrations to new AI-powered features, we build scalable, production-ready AI solutions that plug directly into your product or platform.",
-      features: ["Natural language processing pipelines", "Document intelligence & extraction", "Voice AI agents (Vapi + ElevenLabs)", "Predictive analytics & ML models", "API development & third-party integration"] },
+      features: ["Natural language processing pipelines", "Document intelligence & extraction", "Voice AI agents (Vapi + ElevenLabs)", "Predictive analytics & ML models", "API development & third-party integration"],
+      image: "/custom-ai-dev.jpg" },
     { label: "AI Academy", title: "Teaching the next generation to build with AI",
       desc: "Hands-on AI education for school students, college students, and working professionals. Every programme is project-based with real AI tools used by industry.",
-      features: ["School track (10th & 12th standard)", "College track (undergrad & postgrad)", "Professional track (intensive)", "Industry-recognised certification", "Internship pathway for top performers"] },
+      features: ["School track (10th & 12th standard)", "College track (undergrad & postgrad)", "Professional track (intensive)", "Industry-recognised certification", "Internship pathway for top performers"],
+      image: "/ai-academy.jpg" },
   ]
 
   return (
