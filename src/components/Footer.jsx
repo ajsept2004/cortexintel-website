@@ -7,8 +7,8 @@ export default function Footer() {
         <div className="footer__top">
           <div className="footer__brand">
             <Link to="/" className="nav__logo"><span className="footer__logo-wrap"><img src="/logo.png" alt="CortexIntel" className="nav__logo-img footer__logo-img" /></span></Link>
-            <p className="footer__addr">Kemp House, 152-160 City Road<br />London EC1V 2NX</p>
-            <p className="footer__addr">Globesta, Vyttila<br />Kochi, Kerala 682019</p>
+            <p className="footer__addr">Kemp House, 152-160 City Road<br />London EC1V 2NX, United Kingdom</p>
+            <p className="footer__addr">Globesta, Vyttila<br />Kochi, Kerala 682019, India</p>
           </div>
           <div className="footer__cols">
             <div className="footer__col">

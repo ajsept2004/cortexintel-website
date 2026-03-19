@@ -18,11 +18,11 @@ export default function Contact() {
             <div className="contact-page__info">
               <div className="contact-page__loc">
                 <h3>London, UK</h3>
-                <p><MapPin size={15} /> Kemp House, 152-160 City Road<br />London EC1V 2NX</p>
+                <p><MapPin size={15} /> Kemp House, 152-160 City Road<br />London EC1V 2NX, United Kingdom</p>
               </div>
               <div className="contact-page__loc">
                 <h3>Kochi, India</h3>
-                <p><MapPin size={15} /> Globesta, Sahakarana Road, NH 66<br />Near Broad Bean Hotel, Vyttila<br />Kochi, Kerala 682019</p>
+                <p><MapPin size={15} /> Globesta, Sahakarana Road, NH 66<br />Near Broad Bean Hotel, Vyttila<br />Kochi, Kerala 682019, India</p>
               </div>
               <div className="contact-page__links">
                 <p><Mail size={15} /> <a href="mailto:hello@cortexintel.ai">hello@cortexintel.ai</a></p>
