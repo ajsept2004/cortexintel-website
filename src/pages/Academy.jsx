@@ -27,8 +27,8 @@ export default function Academy() {
       <section className="page-hero">
         <div className="w">
           <R><span className="section__label">AI Academy</span></R>
-          <R delay={100}><h1 className="page-hero__title">Learn AI by building.<br />Not by watching.</h1></R>
-          <R delay={200}><p className="page-hero__sub">Three tracks for different experience levels. Every programme is 100% hands-on with real AI tools used by industry professionals.</p></R>
+          <R delay={100}><h1 className="page-hero__title">Learn AI by building real projects.<br />Not by watching tutorials.</h1></R>
+          <R delay={200}><p className="page-hero__sub">Project-based AI education using the same tools and frameworks used by industry professionals. Three tracks designed for school students, university students, and working professionals.</p></R>
         </div>
       </section>
 
@@ -60,7 +60,7 @@ export default function Academy() {
                   ))}
                 </div>
                 <div className="academy-cert"><Award size={16} /> {t.cert}</div>
-                <Link to="/contact" className="btn btn--accent" style={{ marginTop: 24 }}>Enrol now <ArrowRight size={14} /></Link>
+                <Link to="/contact" className="btn btn--accent" style={{ marginTop: 24 }}>Apply for This Programme <ArrowRight size={14} /></Link>
               </div>
             </R>
             <R delay={150}>

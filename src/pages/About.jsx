@@ -18,8 +18,8 @@ export default function About() {
       <section className="page-hero">
         <div className="w">
           <R><span className="section__label">About Us</span></R>
-          <R delay={100}><h1 className="page-hero__title">Meet the people behind CortexIntel.</h1></R>
-          <R delay={200}><p className="page-hero__sub">We're an early adopter of AI-driven business solutions. Our team combines deep expertise in cybersecurity, AI engineering, and automation to help organisations embrace intelligent technology.</p></R>
+          <R delay={100}><h1 className="page-hero__title">Built on a decade of enterprise technology experience.</h1></R>
+          <R delay={200}><p className="page-hero__sub">We combine deep expertise in cybersecurity, cloud infrastructure, and AI engineering to help businesses deploy intelligent technology with confidence — and measurable results.</p></R>
         </div>
       </section>
 
@@ -49,8 +49,8 @@ export default function About() {
       <section className="section">
         <div className="w">
           <R><span className="section__label">Why CortexIntel?</span></R>
-          <R delay={80}><h2 className="section__heading">With a boutique ethos and ambitious vision, we help you think big and move fast.</h2></R>
-          <R delay={160}><p className="section__text">We open up the next horizons for digitally-enabled businesses — not just driving efficiencies but also unlocking new opportunities to adapt and evolve. There are those that try AI and those that master it. We'd like to put you in the latter camp.</p></R>
+          <R delay={80}><h2 className="section__heading">Enterprise-grade expertise. Boutique-level attention.</h2></R>
+          <R delay={160}><p className="section__text">We've managed SD-WAN rollouts across 200+ sites, secured enterprise cloud environments, and built AI systems processing millions of data points. Now we bring that same rigour to every AI engagement — whether you're a 10-person startup or a 1,000-person enterprise.</p></R>
         </div>
       </section>
 
@@ -58,9 +58,9 @@ export default function About() {
       <section className="section section--alt">
         <div className="w">
           <R><span className="section__label">Our Philosophy</span></R>
-          <R delay={80}><h2 className="section__heading">Optimistic AI</h2></R>
-          <R delay={120}><p className="section__text" style={{ maxWidth: 680 }}>We believe the most powerful implementations of AI combine the best of new technology with the best of what humans can achieve — together elevating what is possible and setting ambitions beyond the horizons we had before.</p></R>
-          <R delay={180}><p className="section__text" style={{ maxWidth: 680 }}>CortexIntel is here to help you set that new vision and realise the next step for your AI-augmented business, giving you scope to unlock your next generation of digital products and customer interactions.</p></R>
+          <R delay={80}><h2 className="section__heading">AI that amplifies human potential</h2></R>
+          <R delay={120}><p className="section__text" style={{ maxWidth: 680 }}>The most powerful AI implementations don't replace people — they elevate what teams can achieve. We build solutions that automate the repetitive, surface the insights, and free your people to do their best work.</p></R>
+          <R delay={180}><p className="section__text" style={{ maxWidth: 680 }}>Every engagement is measured by business outcomes: time saved, costs reduced, revenue generated. If it doesn't move the needle, we don't build it.</p></R>
         </div>
       </section>
 
@@ -93,10 +93,10 @@ export default function About() {
             <R>
               <div className="split__content">
                 <span className="section__label">Dedicated Delivery</span>
-                <h2 className="section__heading">Flexible teams that suit your scale</h2>
-                <p className="section__text">Whether you're an enterprise, SME or startup, CortexIntel provides flexible engagement models. Our teams help you navigate complexity and deliver high-quality outputs on spec, on time and on budget.</p>
-                <p className="section__text">Our relationship doesn't end the day we go live — we're always with you to offer ongoing support, maintenance and evolution.</p>
-                <Link to="/contact" className="btn btn--accent" style={{ marginTop: 20 }}>Let's talk <ArrowRight size={14} /></Link>
+                <h2 className="section__heading">Flexible engagement models built for results</h2>
+                <p className="section__text">Whether you need a one-off strategy sprint or ongoing AI implementation support, we adapt to your scale and timeline. Every engagement includes clear milestones, measurable KPIs, and regular progress reporting.</p>
+                <p className="section__text">Our relationship doesn't end at go-live. We provide ongoing optimisation, monitoring, and evolution to ensure your AI solutions continue delivering value long-term.</p>
+                <Link to="/contact" className="btn btn--accent" style={{ marginTop: 20 }}>Book a Strategy Call <ArrowRight size={14} /></Link>
               </div>
             </R>
             <R delay={150}>

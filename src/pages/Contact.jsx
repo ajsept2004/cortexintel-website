@@ -6,9 +6,9 @@ export default function Contact() {
     <>
       <section className="page-hero">
         <div className="w">
-          <R><span className="section__label">Contact</span></R>
-          <R delay={100}><h1 className="page-hero__title">Want to talk about AI in your business? Just get in touch.</h1></R>
-          <R delay={200}><p className="page-hero__sub">Call us or fill in your details here and we'll be in touch right away. We offer a free 1-hour consultation.</p></R>
+          <R><span className="section__label">Get in Touch</span></R>
+          <R delay={100}><h1 className="page-hero__title">Book your free AI strategy call.</h1></R>
+          <R delay={200}><p className="page-hero__sub">Tell us about your business challenge and we'll show you where AI can deliver the biggest impact. No commitment, no sales pitch — just practical advice from people who've done it.</p></R>
         </div>
       </section>
 
@@ -43,8 +43,8 @@ export default function Contact() {
               <div className="form__group"><label>I'm interested in</label>
                 <select defaultValue=""><option value="" disabled>Select an option</option><option>AI Consulting</option><option>Workflow Automation</option><option>Custom AI Development</option><option>AI Academy</option><option>General Enquiry</option></select>
               </div>
-              <div className="form__group"><label>Message</label><textarea rows={5} placeholder="Tell us about your project or goals..." /></div>
-              <button type="submit" className="btn btn--accent btn--lg btn--full"><Send size={15} /> Send message</button>
+              <div className="form__group"><label>Message</label><textarea rows={5} placeholder="Tell us about your business challenge and what you're hoping to achieve..." /></div>
+              <button type="submit" className="btn btn--accent btn--lg btn--full"><Send size={15} /> Book Your Free Strategy Call</button>
             </form>
           </R>
         </div>

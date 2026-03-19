@@ -7,8 +7,8 @@ export default function ContactSection() {
       <div className="w contact-cta__inner">
         <R>
           <div className="contact-cta__text">
-            <h2>Let's build together</h2>
-            <p>Call us or fill in your details and we'll be in touch right away.</p>
+            <h2>Ready to see what AI can do for your business?</h2>
+            <p>Book a free 30-minute strategy call. We'll identify your highest-ROI AI opportunities and outline a clear path to implementation.</p>
           </div>
         </R>
         <R delay={150}>
@@ -19,15 +19,16 @@ export default function ContactSection() {
             </div>
             <input type="text" placeholder="Company (optional)" />
             <select defaultValue="">
-              <option value="" disabled>What can we help with?</option>
+              <option value="" disabled>What are you looking for?</option>
+              <option>AI Strategy & Consulting</option>
               <option>Workflow Automation</option>
-              <option>Custom AI Solution</option>
+              <option>Custom AI Development</option>
               <option>AI Academy Enrolment</option>
               <option>General Enquiry</option>
             </select>
-            <textarea rows={3} placeholder="Tell us a bit about your project..." />
-            <button type="submit" className="btn btn--accent">
-              <Send size={15} /> <span>Send</span>
+            <textarea rows={3} placeholder="Tell us about your business challenge..." />
+            <button type="submit" className="btn btn--accent btn--lg">
+              <Send size={15} /> <span>Book Your Free Strategy Call</span>
             </button>
           </form>
         </R>

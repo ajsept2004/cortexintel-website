@@ -1,51 +1,105 @@
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
 import R from '../components/Reveal'
 import ContactSection from '../components/ContactSection'
 
-export default function Projects() {
-  const projects = [
-    { client: "UK Law Firm", industry: "Legal", metric: "85%", metricLabel: "time saved", desc: "Automated contract review and extraction for a 50-person law firm, reducing document processing from 4 hours to 35 minutes.", before: "4 hrs per document", after: "35 min per document", tech: ["OpenAI API", "Python", "Make.com"] },
-    { client: "D2C Retail Brand", industry: "Retail", metric: "£120K", metricLabel: "annual savings", desc: "End-to-end order processing automation — from intake to fulfilment notifications, eliminating 12 manual steps.", before: "12 manual steps", after: "Fully automated", tech: ["Zapier", "Shopify API", "Claude AI"] },
-    { client: "Multi-Location Clinic", industry: "Healthcare", metric: "24/7", metricLabel: "availability", desc: "Voice AI receptionist handling appointments, rescheduling, and patient queries around the clock.", before: "9am–5pm coverage", after: "Round-the-clock AI", tech: ["Vapi.ai", "ElevenLabs", "GoHighLevel"] },
-    { client: "Financial Services Firm", industry: "Finance", metric: "92%", metricLabel: "accuracy", desc: "Automated monthly financial reporting from 6 data sources with natural language analysis.", before: "2 days manual work", after: "15 min automated", tech: ["Python", "OpenAI", "Google Sheets API"] },
-    { client: "Education Academy", industry: "Education", metric: "3x", metricLabel: "conversion lift", desc: "AI chatbot handling prospective student queries, qualification checks, and campus visit bookings.", before: "48hr response time", after: "Instant AI response", tech: ["Claude AI", "Voiceflow", "WhatsApp API"] },
-  ]
+const caseStudies = [
+  {
+    industry: "Legal",
+    title: "How a London Law Firm Cut Contract Review Time by 85%",
+    challenge: "A 50-person London law firm was drowning in manual contract review. Each document took over 4 hours to process, creating costly bottlenecks that delayed deals and frustrated clients. Senior associates were spending more time on repetitive clause checking than on high-value advisory work.",
+    solution: "We deployed an AI-powered contract analysis pipeline that automatically extracts, categorises, and flags key clauses across hundreds of document types. The system integrates directly into the firm's existing workflow, delivering structured outputs that lawyers can review and approve in minutes.",
+    metrics: [
+      { value: "85%", label: "Time Reduction" },
+      { value: "£180K", label: "Annual Savings" },
+      { value: "3x", label: "Document Throughput" },
+    ],
+  },
+  {
+    industry: "Retail",
+    title: "Saving £120K Annually Through Intelligent Order Processing",
+    challenge: "A fast-growing D2C brand was manually routing orders across 6 warehouses, leading to frequent shipping errors, delayed fulfilment, and rising customer complaints. The 12-step manual process couldn't keep pace with seasonal demand spikes.",
+    solution: "We built an automated order orchestration system with AI-driven demand prediction. Orders are now intelligently routed to the optimal warehouse based on stock levels, proximity, and delivery speed — with zero manual intervention from intake to dispatch.",
+    metrics: [
+      { value: "£120K", label: "Annual Savings" },
+      { value: "94%", label: "Fewer Errors" },
+      { value: "2 Days", label: "Faster Fulfilment" },
+    ],
+  },
+  {
+    industry: "Healthcare",
+    title: "24/7 Patient Access Without Hiring a Single Receptionist",
+    challenge: "A multi-location clinic with 4 sites was losing patients due to missed calls and zero out-of-hours coverage. Staff were overwhelmed during peak hours, and evenings and weekends meant voicemail — a dead end for urgent patient needs.",
+    solution: "We implemented a Voice AI receptionist that handles appointment bookings, rescheduling, patient queries, and basic triage around the clock. The system speaks naturally, understands context, and escalates complex cases to on-call staff when needed.",
+    metrics: [
+      { value: "24/7", label: "Patient Coverage" },
+      { value: "67%", label: "Fewer Missed Appts" },
+      { value: "40%", label: "Cost Reduction" },
+    ],
+  },
+  {
+    industry: "Finance",
+    title: "From 3-Day Reports to Real-Time Financial Intelligence",
+    challenge: "A financial services firm spent 3 days each month compiling compliance reports from 6 disconnected data sources. The manual process was error-prone, stressful, and left no time for the analysis that actually drives decisions.",
+    solution: "We automated the entire reporting pipeline — from data extraction and cross-source validation to formatted report generation with natural language summaries. What once took days now runs in minutes with higher accuracy than manual compilation ever achieved.",
+    metrics: [
+      { value: "92%", label: "Accuracy Rate" },
+      { value: "95%", label: "Time Saved" },
+      { value: "0", label: "Compliance Penalties" },
+    ],
+  },
+  {
+    industry: "Education",
+    title: "Tripling Student Enrollment with an AI Admissions Assistant",
+    challenge: "An education academy was losing prospective students to faster-responding competitors. With a 48-hour average response time, enquiries went cold before the admissions team could follow up. Manual qualification and scheduling added further delays.",
+    solution: "We deployed an AI admissions assistant across web and WhatsApp that instantly handles enquiries, qualifies prospects, answers programme questions, and books campus visits — all in a natural, conversational experience available day and night.",
+    metrics: [
+      { value: "3x", label: "Conversion Lift" },
+      { value: "89%", label: "Query Resolution" },
+      { value: "60%", label: "Less Admin Time" },
+    ],
+  },
+]
 
+export default function CaseStudies() {
   return (
     <>
       <section className="page-hero">
         <div className="w">
-          <R><span className="section__label">Our Work</span></R>
-          <R delay={100}><h1 className="page-hero__title">Real AI solutions for real businesses.</h1></R>
-          <R delay={200}><p className="page-hero__sub">Every project starts with understanding the problem. Here's how we solved them.</p></R>
+          <R><span className="section__label">Case Studies</span></R>
+          <R delay={100}><h1 className="page-hero__title">Real results. Measurable impact.</h1></R>
+          <R delay={200}><p className="page-hero__sub">See how we've helped businesses across industries deploy practical AI solutions that deliver ROI in weeks, not years.</p></R>
         </div>
       </section>
 
       <section className="section">
         <div className="w">
-          {projects.map((p, i) => (
+          {caseStudies.map((cs, i) => (
             <R delay={i * 80} key={i}>
-              <div className="project-card">
-                <div className="project-card__head">
-                  <div>
-                    <span className="project-card__industry">{p.industry}</span>
-                    <h3>{p.client}</h3>
+              <div className="case-study-card">
+                <span className="case-study-card__tag">{cs.industry}</span>
+                <h3 className="case-study-card__title">{cs.title}</h3>
+
+                <div className="case-study-card__body">
+                  <div className="case-study-card__section">
+                    <h4 className="case-study-card__heading">Challenge</h4>
+                    <p>{cs.challenge}</p>
                   </div>
-                  <div className="project-card__metric">
-                    <span className="project-card__metric-n">{p.metric}</span>
-                    <span className="project-card__metric-l">{p.metricLabel}</span>
+
+                  <div className="case-study-card__section">
+                    <h4 className="case-study-card__heading">Solution</h4>
+                    <p>{cs.solution}</p>
                   </div>
                 </div>
-                <p>{p.desc}</p>
-                <div className="project-card__compare">
-                  <div><span className="project-card__label">Before</span><span>{p.before}</span></div>
-                  <span className="project-card__arrow">→</span>
-                  <div><span className="project-card__label">After</span><span className="project-card__after">{p.after}</span></div>
+
+                <div className="case-study-card__metrics">
+                  {cs.metrics.map((m, j) => (
+                    <div className="metric-highlight" key={j}>
+                      <span className="metric-highlight__number">{m.value}</span>
+                      <span className="metric-highlight__label">{m.label}</span>
+                    </div>
+                  ))}
                 </div>
-                <div className="project-card__tech">
-                  {p.tech.map((t, j) => <span key={j}>{t}</span>)}
-                </div>
+
+                <span className="case-study-card__link">Read full case study &rarr;</span>
               </div>
             </R>
           ))}

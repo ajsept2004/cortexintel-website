@@ -15,7 +15,7 @@ export default function Nav() {
 
   const links = [
     { to: '/services', label: 'Services' },
-    { to: '/projects', label: 'Work' },
+    { to: '/case-studies', label: 'Case Studies' },
     { to: '/academy', label: 'Academy' },
     { to: '/about', label: 'About' },
     { to: '/contact', label: 'Contact' },
@@ -33,7 +33,7 @@ export default function Nav() {
               {l.label}
             </Link>
           ))}
-          <Link to="/contact" className="nav__cta" onClick={() => setOpen(false)}>Let's talk</Link>
+          <Link to="/contact" className="nav__cta" onClick={() => setOpen(false)}>Book a Strategy Call</Link>
         </div>
         <button className="nav__toggle" onClick={() => setOpen(!open)} aria-label="Menu">
           {open ? <X size={22} /> : <Menu size={22} />}

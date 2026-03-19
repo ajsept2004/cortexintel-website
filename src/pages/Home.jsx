@@ -1,21 +1,14 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, ArrowDown, Workflow, Cpu, Bot, BarChart3 } from 'lucide-react'
+import { ArrowRight, ArrowDown, CheckCircle } from 'lucide-react'
 import R from '../components/Reveal'
 import ContactSection from '../components/ContactSection'
 
 export default function Home() {
-  const services = [
-    { icon: <Workflow size={28} />, title: "AI Consulting", desc: "Strategy, roadmaps, and workshops to identify where AI creates the most value for your business." },
-    { icon: <Bot size={28} />, title: "Agentic Automation", desc: "Intelligent workflows, AI agents, and integrations that eliminate manual work." },
-    { icon: <Cpu size={28} />, title: "AI Development", desc: "Custom AI software — from document processing to predictive analytics and voice AI." },
-    { icon: <BarChart3 size={28} />, title: "AI Academy", desc: "Hands-on AI training for school students, college students, and professionals." },
-  ]
-
   const work = [
-    { client: "UK Law Firm", desc: "Automated contract review and extraction — 85% time reduction.", metric: "85% faster" },
-    { client: "D2C Retail Brand", desc: "End-to-end order processing automation — £120K annual savings.", metric: "£120K saved" },
-    { client: "Healthcare Clinic", desc: "Voice AI receptionist providing 24/7 appointment management.", metric: "24/7 coverage" },
-    { client: "Financial Services", desc: "Automated monthly reporting from 6 data sources — 92% accuracy.", metric: "92% accurate" },
+    { client: "UK Law Firm", title: "85% faster contract processing", desc: "Automated contract review and extraction — reducing manual review time from days to hours.", metric: "85% faster" },
+    { client: "D2C Retail Brand", title: "£120K annual savings unlocked", desc: "End-to-end order processing automation eliminating manual data entry and reducing errors.", metric: "£120K saved" },
+    { client: "Healthcare Clinic", title: "24/7 patient booking coverage", desc: "Voice AI receptionist handling appointment scheduling, rescheduling, and patient queries around the clock.", metric: "24/7 coverage" },
+    { client: "Financial Services", title: "92% reporting accuracy achieved", desc: "Automated monthly reporting consolidating 6 data sources into actionable dashboards.", metric: "92% accurate" },
   ]
 
   return (
@@ -24,67 +17,124 @@ export default function Home() {
       <section className="hero">
         <div className="hero__bg" />
         <div className="w hero__inner">
-          <R><h1 className="hero__title">Transform your business with<br /><em>intelligent AI solutions</em></h1></R>
-          <R delay={150}><p className="hero__sub">CortexIntel is a boutique AI automation agency with offices in London and Kochi, creating innovative artificial intelligence software and education tailored to your unique requirements.</p></R>
+          <R><span className="section__label">AI Consulting &amp; Automation</span></R>
+          <R delay={100}><h1 className="hero__title">We help businesses deploy AI that delivers<br /><em>measurable ROI in under 90 days.</em></h1></R>
+          <R delay={200}><p className="hero__sub">From strategy to implementation, we turn AI from a buzzword into a competitive advantage for mid-sized businesses across the UK and India.</p></R>
           <R delay={300}>
             <div className="hero__actions">
-              <Link to="/contact" className="btn btn--accent">Let's talk <ArrowRight size={15} /></Link>
-              <Link to="/services" className="btn btn--outline">Our services</Link>
+              <Link to="/contact" className="btn btn--accent">Book a Strategy Call <ArrowRight size={15} /></Link>
+              <Link to="/case-studies" className="btn btn--outline">View Case Studies</Link>
             </div>
           </R>
         </div>
-        <a href="#intro" className="hero__scroll"><ArrowDown size={20} /></a>
+        <a href="#stats" className="hero__scroll"><ArrowDown size={20} /></a>
       </section>
 
-      {/* ABOUT INTRO */}
-      <section className="section section--alt" id="intro">
+      {/* AUTHORITY STATS */}
+      <section className="section section--alt" id="stats">
         <div className="w">
-          <R><span className="section__label">About CortexIntel</span></R>
-          <R delay={100}>
-            <h2 className="section__heading section__heading--lg">We work to uncover the potential for AI to boost your operations. Automating your existing tasks and creating new AI-driven tools to accelerate your offering.</h2>
-          </R>
-          <R delay={200}>
-            <div className="section__links">
-              <Link to="/services" className="section__link">AI Consulting</Link>
-              <Link to="/services" className="section__link">Agentic Automation</Link>
-              <Link to="/services" className="section__link">AI Development</Link>
-              <Link to="/academy" className="section__link">AI Academy</Link>
+          <R>
+            <div className="stats-grid">
+              <div className="stats-grid__item">
+                <h3 className="stats-grid__number">85%</h3>
+                <p className="stats-grid__label">Average time saved on automated processes</p>
+              </div>
+              <div className="stats-grid__item">
+                <h3 className="stats-grid__number">£2M+</h3>
+                <p className="stats-grid__label">Cost savings delivered for clients</p>
+              </div>
+              <div className="stats-grid__item">
+                <h3 className="stats-grid__number">50+</h3>
+                <p className="stats-grid__label">AI solutions deployed across industries</p>
+              </div>
+              <div className="stats-grid__item">
+                <h3 className="stats-grid__number">90 days</h3>
+                <p className="stats-grid__label">Average time from strategy to production</p>
+              </div>
             </div>
-          </R>
-          <R delay={300}>
-            <Link to="/services" className="link-arrow">Discover more <ArrowRight size={14} /></Link>
           </R>
         </div>
       </section>
 
-      {/* SERVICES SPLIT */}
+      {/* OUR PROCESS TIMELINE */}
       <section className="section">
         <div className="w">
-          <div className="split">
-            <R>
-              <div className="split__content">
-                <span className="section__label">AI Consulting & Strategy</span>
-                <h2 className="section__heading">AI is exciting, but getting started can be tough. We simplify the journey, guiding you from idea to execution.</h2>
-                <p className="section__text">At CortexIntel we help both new and established businesses incorporate AI into their workflows. No project is too big or small. Let's build together.</p>
-                <Link to="/services" className="link-arrow">Explore AI Consulting <ArrowRight size={14} /></Link>
+          <R><span className="section__label">Our Process</span></R>
+          <R delay={100}><h2 className="section__heading section__heading--lg">From discovery to deployment in 90 days</h2></R>
+          <div className="process-timeline">
+            <R delay={150}>
+              <div className="process-step">
+                <span className="process-step__number">01</span>
+                <h3>Discovery</h3>
+                <p>Deep-dive into your business processes, pain points, and opportunities for AI-driven improvement.</p>
               </div>
             </R>
-            <R delay={150}>
-              <div className="split__visual split__visual--gradient" />
+            <R delay={250}>
+              <div className="process-step">
+                <span className="process-step__number">02</span>
+                <h3>Strategy</h3>
+                <p>Define your AI roadmap with clear ROI projections, technology selection, and implementation timeline.</p>
+              </div>
+            </R>
+            <R delay={350}>
+              <div className="process-step">
+                <span className="process-step__number">03</span>
+                <h3>Build</h3>
+                <p>Rapid prototyping and validation of AI solutions with real data and measurable outcomes.</p>
+              </div>
+            </R>
+            <R delay={450}>
+              <div className="process-step">
+                <span className="process-step__number">04</span>
+                <h3>Scale</h3>
+                <p>Production deployment, team training, and ongoing optimisation to maximise long-term value.</p>
+              </div>
             </R>
           </div>
         </div>
       </section>
 
+      {/* SERVICES SPLIT — AI Consulting */}
       <section className="section section--alt">
+        <div className="w">
+          <div className="split">
+            <R>
+              <div className="split__content">
+                <span className="section__label">AI Strategy &amp; Consulting</span>
+                <h2 className="section__heading">Reduce operational costs by up to 40% with the right AI strategy</h2>
+                <p className="section__text">We cut through the noise to identify exactly where AI will deliver the highest ROI for your business. No generic playbooks — just practical, tailored roadmaps built around your specific processes and challenges.</p>
+                <ul className="feature-list">
+                  <li><CheckCircle size={16} /> AI opportunity assessment &amp; ROI modelling</li>
+                  <li><CheckCircle size={16} /> Process mapping &amp; automation audit</li>
+                  <li><CheckCircle size={16} /> Technology selection &amp; architecture planning</li>
+                  <li><CheckCircle size={16} /> Change management &amp; team enablement</li>
+                </ul>
+                <Link to="/contact" className="link-arrow">Get Your AI Roadmap <ArrowRight size={14} /></Link>
+              </div>
+            </R>
+            <R delay={150}>
+              <div className="split__visual split__visual--gradient1" />
+            </R>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES SPLIT — AI Development */}
+      <section className="section">
         <div className="w">
           <div className="split split--reverse">
             <R>
               <div className="split__content">
-                <span className="section__label">AI Development & Automation</span>
-                <h2 className="section__heading">Our developers create the software that AI-enables your business. No jargon. No nonsense.</h2>
-                <p className="section__text">Just tailored AI tools that fit your needs. From workflow automation to voice AI agents, we build what you need and help you create what's next.</p>
-                <Link to="/services" className="link-arrow">Explore AI Development <ArrowRight size={14} /></Link>
+                <span className="section__label">AI Development &amp; Automation</span>
+                <h2 className="section__heading">Deploy intelligent automation that works while you sleep</h2>
+                <p className="section__text">From autonomous AI agents to custom integrations, we build production-ready solutions that reduce manual work, eliminate errors, and free your team to focus on high-value activities.</p>
+                <ul className="feature-list">
+                  <li><CheckCircle size={16} /> Autonomous AI workflow automation</li>
+                  <li><CheckCircle size={16} /> Custom AI agents &amp; chatbots</li>
+                  <li><CheckCircle size={16} /> Voice AI &amp; conversational interfaces</li>
+                  <li><CheckCircle size={16} /> API integration &amp; data pipelines</li>
+                </ul>
+                <Link to="/contact" className="link-arrow">See Your Automation Potential <ArrowRight size={14} /></Link>
               </div>
             </R>
             <R delay={150}>
@@ -94,32 +144,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WORK */}
-      <section className="section">
+      {/* CASE STUDIES */}
+      <section className="section section--alt">
         <div className="w">
-          <R><span className="section__label">Our Work</span></R>
-          <R delay={80}><h2 className="section__heading">Real AI solutions for real businesses.</h2></R>
+          <R><span className="section__label">Case Studies</span></R>
+          <R delay={80}><h2 className="section__heading">Proven results across industries</h2></R>
+          <R delay={120}><p className="section__text">Every engagement is measured by business outcomes, not lines of code.</p></R>
           <div className="work-grid">
             {work.map((w, i) => (
               <R delay={150 + i * 80} key={i}>
                 <div className="work-card">
                   <span className="work-card__metric">{w.metric}</span>
-                  <h3>{w.client}</h3>
+                  <h3>{w.title}</h3>
                   <p>{w.desc}</p>
                 </div>
               </R>
             ))}
           </div>
-          <R delay={500}><Link to="/projects" className="link-arrow" style={{ marginTop: 40, display: 'inline-flex' }}>See all our work <ArrowRight size={14} /></Link></R>
+          <R delay={500}><Link to="/case-studies" className="link-arrow" style={{ marginTop: 40, display: 'inline-flex' }}>View all case studies &rarr; <ArrowRight size={14} /></Link></R>
         </div>
       </section>
 
-      {/* UNLOCK CTA */}
+      {/* CTA */}
       <section className="section section--cta">
         <div className="w" style={{ textAlign: 'center', maxWidth: 700 }}>
-          <R><h2 className="section__heading section__heading--lg" style={{ textAlign: 'center' }}>Unlock your<br />AI potential</h2></R>
-          <R delay={100}><p className="section__text" style={{ textAlign: 'center', margin: '0 auto 40px' }}>We automate tasks, create AI-driven tools, and embed smart solutions to accelerate your operations. If you're ready to talk, just get in touch. We offer a <strong>free 1-hour consultation call</strong>.</p></R>
-          <R delay={200}><Link to="/contact" className="btn btn--accent btn--lg">Find out how <ArrowRight size={15} /></Link></R>
+          <R><h2 className="section__heading section__heading--lg" style={{ textAlign: 'center' }}>Ready to see what AI can<br />do for your business?</h2></R>
+          <R delay={100}><p className="section__text" style={{ textAlign: 'center', margin: '0 auto 40px' }}>Book a free 30-minute strategy call. We'll identify your highest-ROI AI opportunities and outline a clear path to implementation.</p></R>
+          <R delay={200}><Link to="/contact" className="btn btn--accent btn--lg">Book Your Free Strategy Call <ArrowRight size={15} /></Link></R>
         </div>
       </section>
 
