@@ -1,18 +1,10 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Zap, Users, Shield, Globe } from 'lucide-react'
+import { ArrowRight, Zap, Users, Shield, Globe, Server, Brain, BarChart3 } from 'lucide-react'
 import R from '../components/Reveal'
 import ContactSection from '../components/ContactSection'
+import MiniProcess from '../components/MiniProcess'
 
 export default function About() {
-  const team = [
-    { name: "Team Member", role: "Founder & Director", placeholder: true },
-    { name: "Team Member", role: "Co-Director, India", placeholder: true },
-    { name: "Team Member", role: "Lead AI Instructor", placeholder: true },
-    { name: "Team Member", role: "AI Developer", placeholder: true },
-    { name: "Team Member", role: "Head of Delivery", placeholder: true },
-    { name: "Team Member", role: "Operations Manager", placeholder: true },
-  ]
-
   return (
     <>
       <section className="page-hero">
@@ -23,25 +15,30 @@ export default function About() {
         </div>
       </section>
 
-      {/* TEAM */}
+      {/* EXPERTISE — replaces placeholder team cards */}
       <section className="section section--alt">
         <div className="w">
-          <R><span className="section__label">Our Team</span></R>
-          <R delay={80}><h2 className="section__heading section__heading--lg">Our team has been working with AI and digital infrastructure for over a decade. We take pride in our work across enterprises, SMEs and startups alike.</h2></R>
-          <div className="team-grid">
-            {team.map((m, i) => (
-              <R delay={150 + i * 60} key={i}>
-                <div className="team-card">
-                  <div className="team-card__avatar">
-                    <span>{m.name.split(' ').map(w => w[0]).join('')}</span>
-                  </div>
-                  <h3>{m.name}</h3>
-                  <p>{m.role}</p>
+          <R><span className="section__label">Our Expertise</span></R>
+          <R delay={80}><h2 className="section__heading section__heading--lg">Deep domain knowledge across AI, infrastructure, and security</h2></R>
+          <div className="expertise-grid">
+            {[
+              { icon: <Brain size={24} />, number: '50+', title: 'AI Solutions Deployed', desc: 'Custom AI agents, NLP pipelines, and automation systems built for businesses across legal, retail, healthcare, and finance.' },
+              { icon: <Server size={24} />, number: '200+', title: 'Enterprise Sites Managed', desc: 'Large-scale SD-WAN rollouts, cloud migrations, and infrastructure projects delivered across the UK and India.' },
+              { icon: <Shield size={24} />, number: '10+', title: 'Years in Cybersecurity', desc: 'Enterprise-grade security embedded in every solution. Data protection and compliance are non-negotiable.' },
+              { icon: <BarChart3 size={24} />, number: '£2M+', title: 'Client Savings Delivered', desc: 'Measurable cost reductions and efficiency gains across every engagement. We only build what moves the needle.' },
+              { icon: <Users size={24} />, number: '500+', title: 'Students Trained', desc: 'AI education delivered to school students, university students, and working professionals across India and the UK.' },
+              { icon: <Globe size={24} />, number: '2', title: 'Global Offices', desc: 'London and Kochi. World-class consulting standards delivered with local understanding and competitive pricing.' },
+            ].map((e, i) => (
+              <R delay={120 + i * 60} key={i}>
+                <div className="expertise-card">
+                  <div className="expertise-card__icon">{e.icon}</div>
+                  <div className="expertise-card__number">{e.number}</div>
+                  <h3>{e.title}</h3>
+                  <p>{e.desc}</p>
                 </div>
               </R>
             ))}
           </div>
-          <R><p className="section__text" style={{ marginTop: 32, textAlign: 'center', opacity: 0.6, fontStyle: 'italic' }}>Team profiles coming soon. We're actively building our team for 2026.</p></R>
         </div>
       </section>
 
@@ -86,7 +83,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* DELIVERY */}
+      {/* DELIVERY — content block replaces empty gradient */}
       <section className="section section--alt">
         <div className="w">
           <div className="split">
@@ -100,7 +97,12 @@ export default function About() {
               </div>
             </R>
             <R delay={150}>
-              <div className="split__visual split__visual--gradient3" />
+              <MiniProcess steps={[
+                { title: 'Discovery Call', desc: 'Free 30-minute consultation to understand your challenges' },
+                { title: 'Proposal & Scope', desc: 'Clear deliverables, timeline, and pricing within 48 hours' },
+                { title: 'Build & Iterate', desc: 'Rapid prototyping with weekly progress reviews' },
+                { title: 'Deploy & Support', desc: 'Go-live with ongoing monitoring and optimisation' },
+              ]} />
             </R>
           </div>
         </div>

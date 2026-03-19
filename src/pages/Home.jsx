@@ -3,6 +3,8 @@ import { ArrowRight, ArrowDown, CheckCircle } from 'lucide-react'
 import R from '../components/Reveal'
 import ContactSection from '../components/ContactSection'
 import MetricsSection from '../components/MetricsSection'
+import MiniCaseStudy from '../components/MiniCaseStudy'
+import MiniMetrics from '../components/MiniMetrics'
 
 export default function Home() {
   const work = [
@@ -117,7 +119,12 @@ export default function Home() {
               </div>
             </R>
             <R delay={150}>
-              <div className="split__visual split__visual--gradient1" />
+              <MiniCaseStudy
+                industry="UK Law Firm"
+                metric="85%"
+                problem="Manual contract review consuming 40+ hours per week across the legal team."
+                result="AI-powered document processing reduced review time by 85% — saving £180K annually."
+              />
             </R>
           </div>
         </div>
@@ -142,7 +149,12 @@ export default function Home() {
               </div>
             </R>
             <R delay={150}>
-              <div className="split__visual split__visual--gradient2" />
+              <MiniMetrics items={[
+                { value: '40%', label: 'Cost Reduction' },
+                { value: '3×', label: 'Efficiency Gain' },
+                { value: '80%', label: 'Less Manual Work' },
+                { value: '24/7', label: 'Autonomous Ops' },
+              ]} />
             </R>
           </div>
         </div>
