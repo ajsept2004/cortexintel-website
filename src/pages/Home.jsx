@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, ArrowDown, CheckCircle } from 'lucide-react'
 import R from '../components/Reveal'
 import ContactSection from '../components/ContactSection'
+import MetricsSection from '../components/MetricsSection'
 
 export default function Home() {
   const work = [
@@ -29,6 +30,9 @@ export default function Home() {
         </div>
         <a href="#stats" className="hero__scroll"><ArrowDown size={20} /></a>
       </section>
+
+      {/* METRICS IMPACT */}
+      <MetricsSection />
 
       {/* AUTHORITY STATS */}
       <section className="section section--alt" id="stats">
